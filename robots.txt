@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://imanay.github.io/anayclickz-site/sitemap.xml

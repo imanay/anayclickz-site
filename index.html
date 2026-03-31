@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anay Clickz | Cinematic Nature & Travel Portfolio</title>
+  <meta name="description" content="Anay Clickz is a cinematic photography and videography portfolio featuring nature, travel, wildlife, birds, and environmental storytelling." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg2: #0c1c2c;
+      --card: rgba(255,255,255,0.08);
+      --line: rgba(255,255,255,0.12);
+      --text: #eef4ff;
+      --muted: #b9c6da;
+      --accent1: #7dd3fc;
+      --accent2: #86efac;
+      --accent3: #f9a8d4;
+      --accent4: #fbbf24;
+      --shadow: 0 20px 70px rgba(0,0,0,0.35);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.20), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(134,239,172,0.18), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(249,168,212,0.12), transparent 25%),
+        linear-gradient(180deg, #07111f 0%, #0a1625 45%, #07111f 100%);
+      color: var(--text);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 17, 31, 0.58);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand strong {
+      font-size: 1.1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 40px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 620px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #0f172a;
+      isolation: isolate;
+    }
+
+    .hero-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.08) contrast(1.05);
+      transform: scale(1.02);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5,10,18,0.08) 0%, rgba(5,10,18,0.40) 38%, rgba(5,10,18,0.88) 100%),
+        linear-gradient(120deg, rgba(125,211,252,0.10), transparent 28%, rgba(134,239,172,0.10));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 34px;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #eff6ff;
+      padding: 8px 14px;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 5.8rem);
+      line-height: 0.94;
+      margin: 18px 0 14px;
+      letter-spacing: -0.04em;
+      max-width: 10ch;
+    }
+
+    .hero-content p {
+      max-width: 55ch;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #dbe7f6;
+      margin: 0 0 24px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(0,0,0,.22); }
+
+    .btn-primary {
+      color: #07111f;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.10);
+      color: white;
+      backdrop-filter: blur(8px);
+    }
+
+    .side-stack {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 20px;
+    }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .intro-box {
+      padding: 24px;
+    }
+
+    .intro-box h2 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .intro-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+
+    .stats li {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stats b {
+      display: block;
+      font-size: 1.06rem;
+      margin-bottom: 6px;
+    }
+
+    .stats span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .video-card {
+      overflow: hidden;
+    }
+
+    .video-card video {
+      width: 100%;
+      display: block;
+      border-radius: 26px;
+      aspect-ratio: 9 / 14;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .video-meta {
+      padding: 18px 22px 22px;
+    }
+
+    .video-meta h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .video-meta p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    section {
+      padding: 28px 0 42px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 52ch;
+      line-height: 1.75;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .collection {
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .collection .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(125,211,252,.25), rgba(134,239,172,.25));
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .collection h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .collection p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .work {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
+      min-height: 280px;
+      transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+    }
+
+    .work:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.22);
+      box-shadow: 0 26px 80px rgba(0,0,0,.45);
+    }
+
+    .work-inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        radial-gradient(circle at top right, rgba(125,211,252,.16), transparent 38%),
+        radial-gradient(circle at bottom left, rgba(134,239,172,.12), transparent 40%);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-self: flex-start;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.08);
+      color: #e8f0ff;
+    }
+
+    .work h3 {
+      margin: 16px 0 10px;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .work p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .work-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 22px;
+      color: #f3f7fd;
+      font-weight: 600;
+    }
+
+    .arrow {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .feature-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .feature-card {
+      min-height: 280px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #111827;
+    }
+
+    .feature-card img, .feature-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .feature-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 24px;
+      background: linear-gradient(180deg, transparent 0%, rgba(3,7,18,0.8) 75%);
+    }
+
+    .feature-overlay h3 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .feature-overlay p {
+      margin: 0;
+      color: #d7e1f0;
+      line-height: 1.7;
+    }
+
+    .cta {
+      padding: 28px;
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(125,211,252,.18), transparent 22%),
+        radial-gradient(circle at 100% 100%, rgba(249,168,212,.16), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.03em;
+    }
+
+    .cta p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 60ch;
+    }
+
+    footer {
+      padding: 22px 0 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .feature-strip,
+      .collections,
+      .works {
+        grid-template-columns: 1fr 1fr;
+      }
+      .side-stack {
+        grid-template-rows: auto auto auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .hero-grid,
+      .feature-strip,
+      .collections,
+      .works,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        min-height: 520px;
+      }
+      h1 {
+        max-width: 100%;
+      }
+      .hero-content {
+        padding: 24px;
+      }
+      .section-head,
+      .cta {
+        display: block;
+      }
+      .cta .actions {
+        margin-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <strong>Anay Clickz</strong>
+        <span>Nature • Travel • Wildlife • Reels</span>
+      </div>
+      <div class="nav-links">
+        <a href="#collections">Collections</a>
+        <a href="#featured">Featured</a>
+        <a href="#instagram">Instagram Links</a>
+        <a href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <img src="hero-river.jpeg" alt="River landscape by Anay Clickz" />
+          <div class="hero-content">
+            <div class="eyebrow">Cinematic Travel Portfolio</div>
+            <h1>See nature with depth, mood, and motion.</h1>
+            <p>
+              Welcome to the official visual portfolio of <strong>@anay_clickz</strong> — a colorful showcase of landscapes,
+              travel moments, wildlife stories, and atmospheric reels. This version is designed to feel richer, prettier,
+              and more immersive while keeping your work at the center.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#instagram">Explore Posts</a>
+              <a class="btn btn-secondary" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Visit Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-stack">
+          <div class="glass intro-box">
+            <h2>About the work</h2>
+            <p>
+              Nature scenes, scenic roads, birds, animals, and outdoor atmosphere come together here in a cinematic format
+              made for viewers who love travel, calm landscapes, and visual storytelling.
+            </p>
+          </div>
+
+          <ul class="glass intro-box stats">
+            <li><b>Portfolio</b><span>Photos, videos, and selected Instagram posts</span></li>
+            <li><b>Style</b><span>Cinematic, colorful, elegant, and immersive</span></li>
+            <li><b>Focus</b><span>Nature, travel, environment, animals, birds</span></li>
+            <li><b>Profile</b><span>@anay_clickz</span></li>
+          </ul>
+
+          <div class="glass video-card">
+            <video controls muted playsinline preload="metadata" poster="hero-river.jpeg">
+              <source src="featured-reel.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-meta">
+              <h3>Featured Reel</h3>
+              <p>A motion highlight from your collection, placed directly on the homepage for a richer portfolio feel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Creative Focus</div>
+          <h2>Collections with a cinematic identity</h2>
+        </div>
+        <p>
+          The design uses glowing gradients, glass cards, full-screen imagery, and strong spacing so the site feels premium
+          instead of plain.
+        </p>
+      </div>
+
+      <div class="collections">
+        <article class="collection">
+          <div class="icon">🌿</div>
+          <h3>Nature</h3>
+          <p>Quiet rivers, mountains, mist, open skies, and landscapes with mood, scale, and depth.</p>
+        </article>
+        <article class="collection">
+          <div class="icon">🌍</div>
+          <h3>Travel</h3>
+          <p>Road moments, changing scenery, and destination memories captured with warmth and atmosphere.</p>
+        </article>
+        <article class="collection">
+          <div class="icon">🦅</div>
+          <h3>Animals & Birds</h3>
+          <p>Wildlife details and natural behavior framed with patience, timing, and careful observation.</p>
+        </article>
+        <article class="collection">
+          <div class="icon">🎬</div>
+          <h3>Reels</h3>
+          <p>Short-form motion that adds flow, movement, and a more immersive feeling to the portfolio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="featured" class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Featured Visuals</div>
+          <h2>Homepage highlights</h2>
+        </div>
+        <p>
+          Your uploaded image and video are now used as the core visual anchors so the site feels personal and authentic.
+        </p>
+      </div>
+
+      <div class="feature-strip">
+        <div class="feature-card">
+          <img src="hero-river.jpeg" alt="Scenic river landscape" />
+          <div class="feature-overlay">
+            <h3>Signature Landscape</h3>
+            <p>A peaceful river scene with soft mist and dramatic natural framing — perfect as a strong visual introduction.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <video controls muted playsinline preload="metadata" poster="hero-river.jpeg">
+            <source src="featured-reel.mp4" type="video/mp4" />
+          </video>
+          <div class="feature-overlay">
+            <h3>Motion & Mood</h3>
+            <p>Video adds energy and makes the portfolio feel more alive, modern, and cinematic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instagram" class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Instagram Portfolio</div>
+          <h2>Selected posts and reels</h2>
+        </div>
+        <p>
+          These cards use the exact links you provided, so visitors open your real Instagram content directly.
+        </p>
+      </div>
+
+      <div class="works">
+
+        <a class="work" href="https://www.instagram.com/p/DQSAQXKDDAu/?igsh=MWx4a2NnZWIxaXJmdA==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Photo</span>
+              <h3>01. Highland River Mood</h3>
+              <p>A selected image from your Instagram portfolio.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/p/DVKyo7qjAe7/?igsh=MTBocW1jaG40NXcyYQ==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Photo</span>
+              <h3>02. Landscape Story</h3>
+              <p>A selected image from your Instagram portfolio.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/reel/DQAYCxgjN0i/?igsh=MTVtOTRjazMweTJpZw==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Reel</span>
+              <h3>03. Travel Reel</h3>
+              <p>A motion piece that brings travel and nature to life.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/reel/DPl4K8qDFaW/?igsh=MXV6cTFlb2FqeHBzZQ==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Reel</span>
+              <h3>04. Motion Through Nature</h3>
+              <p>A motion piece that brings travel and nature to life.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/p/DKWQdMxOVtI/?img_index=4&igsh=MWdvM2xsaXYxang0cg==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Carousel</span>
+              <h3>05. Scenic Carousel</h3>
+              <p>A multi-image visual story from your collection.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/p/DIsndWTyVsa/?igsh=YXI3cWhxNWNrODFu" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Photo</span>
+              <h3>06. Quiet Atmosphere</h3>
+              <p>A selected image from your Instagram portfolio.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/reel/DInyQ7iSJhS/?igsh=MXExeTFkNHM2bWFxMQ==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Reel</span>
+              <h3>07. Adventure Reel</h3>
+              <p>A motion piece that brings travel and nature to life.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/p/ClLjt52Pf6b/?igsh=MTR2cjNhb3U0dnZ5cw==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Photo</span>
+              <h3>08. Throwback Capture</h3>
+              <p>A selected image from your Instagram portfolio.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="work" href="https://www.instagram.com/p/CS1BdsgJnnK/?igsh=MWgxYzcybnZjMWI5dw==" target="_blank" rel="noreferrer">
+          <div class="work-inner">
+            <div>
+              <span class="badge">Photo</span>
+              <h3>09. Classic Nature Frame</h3>
+              <p>A selected image from your Instagram portfolio.</p>
+            </div>
+            <div class="work-footer">
+              <span>Open on Instagram</span>
+              <span class="arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta">
+        <div>
+          <div class="eyebrow">Follow the Journey</div>
+          <h2>@anay_clickz</h2>
+          <p>
+            Discover more landscapes, reels, wildlife captures, and travel moments through the full Instagram gallery.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Open Instagram</a>
+          <a class="btn btn-secondary" href="#top">Back to Top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built for Anay Clickz • Cinematic portfolio edition
+  </footer>
+</body>
+</html>
