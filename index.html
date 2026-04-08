@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anay Clickz | Photography Portfolio</title>
+  <meta name="description" content="Anay Clickz photography portfolio featuring wildlife, travel, landscapes, and creative captures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-glow glow-1"></div>
+  <div class="page-glow glow-2"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <strong>Anay Clickz</strong>
+          <small>Wildlife • Travel • Nature</small>
+        </span>
+      </a>
+      <nav class="menu">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Connect</a>
+      </nav>
+      <a class="instagram-link" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Instagram</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Photography Portfolio</p>
+        <h1>Frames with mood, detail, and quiet drama.</h1>
+        <p class="hero-text">
+          A clean static website built with <strong>HTML, CSS, and JavaScript</strong>, designed to showcase your best
+          photography in a more elegant and premium way.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#gallery">Explore Gallery</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">View Instagram</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="gallery-viaduct-1.jpeg" alt="Landscape by Anay Clickz" />
+          <div class="hero-overlay">
+            <span>Featured Capture</span>
+            <h2>Snow, stone, and distance.</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip container">
+      <article class="intro-card">
+        <h3>Wildlife</h3>
+        <p>Detailed, intimate moments captured with patience and strong composition.</p>
+      </article>
+      <article class="intro-card">
+        <h3>Travel</h3>
+        <p>Landscapes, bridges, hills, and visual stories that feel cinematic and atmospheric.</p>
+      </article>
+      <article class="intro-card">
+        <h3>Creative</h3>
+        <p>Minimal low-light and close-up work that adds variety and personality to the portfolio.</p>
+      </article>
+    </section>
+
+    <section id="gallery" class="gallery-section container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Gallery</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="travel">Travel</button>
+          <button class="filter" data-filter="wildlife">Wildlife</button>
+          <button class="filter" data-filter="creative">Creative</button>
+          <button class="filter" data-filter="birds">Birds</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-item tall" data-category="travel">
+          <img src="gallery-viaduct-2.jpeg" alt="Viaduct landscape" />
+          <button class="item-info" data-title="Misty Viaduct" data-caption="A distant scenic frame with winter texture and travel mood." data-image="gallery-viaduct-2.jpeg">
+            <span class="tag">Travel</span>
+            <h3>Misty Viaduct</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item" data-category="creative">
+          <img src="gallery-candle.jpeg" alt="Candle flame" />
+          <button class="item-info" data-title="Flame in Silence" data-caption="A minimal low-light composition with a strong focal glow." data-image="gallery-candle.jpeg">
+            <span class="tag">Creative</span>
+            <h3>Flame in Silence</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item wide" data-category="wildlife">
+          <img src="gallery-snake.jpeg" alt="Snake and frog" />
+          <button class="item-info" data-title="Wild Conflict" data-caption="A dramatic wildlife moment with intense detail and tension." data-image="gallery-snake.jpeg">
+            <span class="tag">Wildlife</span>
+            <h3>Wild Conflict</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item" data-category="wildlife">
+          <img src="gallery-dragonfly.jpeg" alt="Dragonfly macro" />
+          <button class="item-info" data-title="Dragonfly Detail" data-caption="A crisp close-up that brings texture and geometry forward." data-image="gallery-dragonfly.jpeg">
+            <span class="tag">Wildlife</span>
+            <h3>Dragonfly Detail</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item tall" data-category="birds">
+          <img src="gallery-bird.jpeg" alt="Bird in foliage" />
+          <button class="item-info" data-title="Color in the Leaves" data-caption="A vivid bird portrait surrounded by soft natural tones." data-image="gallery-bird.jpeg">
+            <span class="tag">Birds</span>
+            <h3>Color in the Leaves</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item" data-category="wildlife">
+          <img src="gallery-squirrel.jpeg" alt="Squirrel on tree" />
+          <button class="item-info" data-title="Stillness on Bark" data-caption="A gentle wildlife portrait with soft background blur." data-image="gallery-squirrel.jpeg">
+            <span class="tag">Wildlife</span>
+            <h3>Stillness on Bark</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item wide" data-category="travel">
+          <img src="gallery-viaduct-1.jpeg" alt="Stone viaduct in snow" />
+          <button class="item-info" data-title="Stone Bridge in Snow" data-caption="A strong landscape with repeating arches and winter contrast." data-image="gallery-viaduct-1.jpeg">
+            <span class="tag">Travel</span>
+            <h3>Stone Bridge in Snow</h3>
+          </button>
+        </article>
+
+        <article class="gallery-item" data-category="travel">
+          <img src="gallery-viaduct-3.jpeg" alt="Hillside landscape" />
+          <button class="item-info" data-title="Muted Hillside" data-caption="A softer travel frame shaped by weather, distance, and quiet color." data-image="gallery-viaduct-3.jpeg">
+            <span class="tag">Travel</span>
+            <h3>Muted Hillside</h3>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section container">
+      <div class="about-copy">
+        <p class="eyebrow">About the Portfolio</p>
+        <h2>Simple tech, stronger presentation.</h2>
+        <p>
+          This version is intentionally built only with <strong>HTML, CSS, and JavaScript</strong>. It keeps the website fast,
+          clean, easy to upload, and easy to update whenever you want to add more images later.
+        </p>
+      </div>
+      <div class="about-card">
+        <ul>
+          <li>Static website, GitHub-friendly</li>
+          <li>Premium visual layout</li>
+          <li>Clickable lightbox gallery</li>
+          <li>Easy future updates</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section container">
+      <div class="contact-box">
+        <p class="eyebrow">Connect</p>
+        <h2>@anay_clickz</h2>
+        <p>Use this portfolio as your main showcase, then send visitors to Instagram for the full collection.</p>
+        <a class="btn btn-primary" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Open Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-panel">
+      <button class="close-btn" id="closeBtn" aria-label="Close">×</button>
+      <img id="lightboxImage" src="" alt="" />
+      <div class="lightbox-copy">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
