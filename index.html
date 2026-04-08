@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anay Clickz | Premium Photography Portfolio</title>
+  <meta name="description" content="Anay Clickz premium portfolio featuring nature, wildlife, birds, travel, and artistic photography." />
+  <meta name="theme-color" content="#0c111b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <strong>Anay Clickz</strong>
+            <small>Nature • Wildlife • Travel • Creative</small>
+          </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#gallery">Gallery</a>
+          <a href="#featured">Featured</a>
+          <a href="#about">About</a>
+          <a href="#connect">Connect</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark light mode">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-label">Light</span>
+          </button>
+          <a class="instagram-btn" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Premium Visual Portfolio</p>
+          <h1>Instagram-style beauty, crafted into a real website.</h1>
+          <p class="hero-text">
+            A polished, modern portfolio for <strong>@anay_clickz</strong>, built with <strong>HTML, CSS, and JavaScript</strong>
+            and enhanced with modern layout techniques, smooth interactions, theme switching, filtering, and a fullscreen lightbox.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#gallery">Explore Gallery</a>
+            <a class="btn btn-secondary" href="#featured">See Highlights</a>
+          </div>
+          <div class="hero-badges">
+            <span>Responsive</span>
+            <span>Dark / Light Mode</span>
+            <span>Instagram-style Masonry</span>
+            <span>Fullscreen Viewer</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <article class="hero-card">
+            <img src="hero-river.jpeg" alt="River landscape by Anay Clickz" />
+            <div class="hero-card-overlay">
+              <span class="mini-tag">Featured Shot</span>
+              <h2>Quiet water, mist, and distance.</h2>
+              <p>A cinematic landscape opener that sets the mood for the portfolio.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stats-strip container reveal">
+        <article class="stat-card">
+          <strong>Portfolio Style</strong>
+          <span>Elegant, immersive, and profile-ready</span>
+        </article>
+        <article class="stat-card">
+          <strong>Photography Focus</strong>
+          <span>Nature, birds, wildlife, travel, artistic frames</span>
+        </article>
+        <article class="stat-card">
+          <strong>Built With</strong>
+          <span>HTML, CSS, JavaScript, modern responsive design</span>
+        </article>
+      </section>
+
+      <section id="featured" class="featured container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Featured Frames</p>
+            <h2>Editorial highlights</h2>
+          </div>
+          <p class="section-text">A curated section that gives your strongest images extra emphasis before the full feed-style gallery.</p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-main reveal">
+            <img src="viaduct-snow.jpeg" alt="Stone bridge in snow" />
+            <div class="featured-overlay">
+              <span class="mini-tag">Travel</span>
+              <h3>Stone Bridge in Snow</h3>
+              <p>Repeating arches, cold tones, and cinematic atmosphere.</p>
+            </div>
+          </article>
+
+          <article class="featured-side reveal">
+            <img src="bird-colorful.jpeg" alt="Colorful bird in leaves" />
+            <div class="featured-overlay">
+              <span class="mini-tag">Birds</span>
+              <h3>Color in the Leaves</h3>
+            </div>
+          </article>
+
+          <article class="featured-side reveal">
+            <img src="sunset-boat.jpeg" alt="Boat at sunset" />
+            <div class="featured-overlay">
+              <span class="mini-tag">Creative</span>
+              <h3>River at Sunset</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-section container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Main Gallery</p>
+            <h2>Instagram-style layout</h2>
+          </div>
+          <p class="section-text">Use the filters, click any photo to open it fullscreen, and switch between dark and light mode.</p>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="travel">Travel</button>
+            <button class="filter" data-filter="wildlife">Wildlife</button>
+            <button class="filter" data-filter="birds">Birds</button>
+            <button class="filter" data-filter="creative">Creative</button>
+            <button class="filter" data-filter="nature">Nature</button>
+          </div>
+        </div>
+
+        <div class="masonry" id="masonryGrid">
+          <article class="masonry-item reveal" data-category="travel nature">
+            <img src="hero-river.jpeg" alt="River landscape" />
+            <button class="card-hit" data-image="hero-river.jpeg" data-title="River Through the Highlands" data-caption="A moody landscape framed by water, rock, and mountain mist.">
+              <span class="mini-tag">Travel</span>
+              <h3>River Through the Highlands</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="birds">
+            <img src="bird-colorful.jpeg" alt="Colorful bird" />
+            <button class="card-hit" data-image="bird-colorful.jpeg" data-title="Color in the Leaves" data-caption="A vivid bird portrait surrounded by calm natural tones.">
+              <span class="mini-tag">Birds</span>
+              <h3>Color in the Leaves</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="creative">
+            <img src="candle.jpeg" alt="Candle" />
+            <button class="card-hit" data-image="candle.jpeg" data-title="Flame in Silence" data-caption="A minimalist low-light frame built around a single point of glow.">
+              <span class="mini-tag">Creative</span>
+              <h3>Flame in Silence</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="wildlife nature">
+            <img src="dragonfly.jpeg" alt="Dragonfly" />
+            <button class="card-hit" data-image="dragonfly.jpeg" data-title="Dragonfly Detail" data-caption="Sharp macro texture, graceful wings, and soft blur behind the subject.">
+              <span class="mini-tag">Wildlife</span>
+              <h3>Dragonfly Detail</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="wildlife">
+            <img src="snake-frog.jpeg" alt="Snake and frog" />
+            <button class="card-hit" data-image="snake-frog.jpeg" data-title="Wild Conflict" data-caption="A dramatic close wildlife capture filled with tension and detail.">
+              <span class="mini-tag">Wildlife</span>
+              <h3>Wild Conflict</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="wildlife">
+            <img src="squirrel.jpeg" alt="Squirrel" />
+            <button class="card-hit" data-image="squirrel.jpeg" data-title="Stillness on Bark" data-caption="A quiet wildlife portrait with soft depth and gentle focus.">
+              <span class="mini-tag">Wildlife</span>
+              <h3>Stillness on Bark</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="travel nature">
+            <img src="viaduct-snow.jpeg" alt="Stone bridge in snow" />
+            <button class="card-hit" data-image="viaduct-snow.jpeg" data-title="Stone Bridge in Snow" data-caption="A strong architectural rhythm cutting through the winter landscape.">
+              <span class="mini-tag">Travel</span>
+              <h3>Stone Bridge in Snow</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="travel nature">
+            <img src="viaduct-mist.jpeg" alt="Misty viaduct" />
+            <button class="card-hit" data-image="viaduct-mist.jpeg" data-title="Misty Viaduct" data-caption="Distance, weather, and terrain brought together in one travel frame.">
+              <span class="mini-tag">Travel</span>
+              <h3>Misty Viaduct</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="travel nature">
+            <img src="viaduct-hills.jpeg" alt="Muted hillside" />
+            <button class="card-hit" data-image="viaduct-hills.jpeg" data-title="Muted Hillside" data-caption="A softer scenic composition shaped by weather and quiet color.">
+              <span class="mini-tag">Nature</span>
+              <h3>Muted Hillside</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="nature creative">
+            <img src="flower-white.jpeg" alt="White flower macro" />
+            <button class="card-hit" data-image="flower-white.jpeg" data-title="White Blossom" data-caption="A close floral frame with softness, texture, and delicate light.">
+              <span class="mini-tag">Nature</span>
+              <h3>White Blossom</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="birds">
+            <img src="bird-wire.jpeg" alt="Bird on wire" />
+            <button class="card-hit" data-image="bird-wire.jpeg" data-title="Evening Perch" data-caption="A solitary bird frame balanced against negative sky space.">
+              <span class="mini-tag">Birds</span>
+              <h3>Evening Perch</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="travel nature">
+            <img src="river-rocks.jpeg" alt="Rocky river" />
+            <button class="card-hit" data-image="river-rocks.jpeg" data-title="Rock and Water" data-caption="A brighter river scene with texture, sunlight, and flowing movement.">
+              <span class="mini-tag">Travel</span>
+              <h3>Rock and Water</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="creative nature">
+            <img src="sunset-boat.jpeg" alt="Sunset boat" />
+            <button class="card-hit" data-image="sunset-boat.jpeg" data-title="River at Sunset" data-caption="A dramatic orange sky with silhouette and reflection.">
+              <span class="mini-tag">Creative</span>
+              <h3>River at Sunset</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="birds nature">
+            <img src="bird-bamboo.jpeg" alt="Bird on bamboo" />
+            <button class="card-hit" data-image="bird-bamboo.jpeg" data-title="Bamboo Watch" data-caption="A calm bird portrait framed by soft-focus natural shapes.">
+              <span class="mini-tag">Birds</span>
+              <h3>Bamboo Watch</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="creative">
+            <img src="lantern-dark.jpeg" alt="Lantern in dark" />
+            <button class="card-hit" data-image="lantern-dark.jpeg" data-title="Lantern Glow" data-caption="A dark atmospheric frame with warm minimal light.">
+              <span class="mini-tag">Creative</span>
+              <h3>Lantern Glow</h3>
+            </button>
+          </article>
+
+          <article class="masonry-item reveal" data-category="birds creative">
+            <img src="bird-silhouette.jpeg" alt="Bird silhouette on branches" />
+            <button class="card-hit" data-image="bird-silhouette.jpeg" data-title="Twilight Silhouette" data-caption="A bold purple-toned silhouette with branches shaping the composition.">
+              <span class="mini-tag">Creative</span>
+              <h3>Twilight Silhouette</h3>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Why this works</p>
+          <h2>Built for GitHub, designed like a real brand portfolio.</h2>
+          <p>
+            This site keeps your mandatory stack of <strong>HTML, CSS, and JavaScript</strong>, then uses modern techniques like
+            CSS masonry-style columns, glassmorphism, responsive grids, theme switching, scroll reveals, and a custom fullscreen viewer
+            to make the experience feel premium without becoming difficult to upload or maintain.
+          </p>
+        </div>
+
+        <div class="about-cards reveal">
+          <article>
+            <strong>Fast to load</strong>
+            <span>No heavy backend required.</span>
+          </article>
+          <article>
+            <strong>Easy to update</strong>
+            <span>Add more photos later by uploading them to the repo.</span>
+          </article>
+          <article>
+            <strong>Profile ready</strong>
+            <span>Clean enough to link directly from your social profile.</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="connect" class="connect container reveal">
+        <div class="connect-box">
+          <p class="eyebrow">Connect</p>
+          <h2>Show the portfolio, then guide visitors to Instagram.</h2>
+          <p>
+            This website works as your main showcase page while Instagram remains your full content feed.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.instagram.com/anay_clickz/" target="_blank" rel="noreferrer">Open Instagram</a>
+            <a class="btn btn-secondary" href="#top">Back to Top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+    <div class="lightbox-panel">
+      <button class="close-lightbox" id="closeLightbox" aria-label="Close image">×</button>
+      <img id="lightboxImage" src="" alt="" />
+      <div class="lightbox-copy">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
